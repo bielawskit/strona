@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+  background-color: #d3d3d3;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.App-logo {
+  height: 50px;
+}
+
+.App-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.App-nav li {
+  padding: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.App-nav li.active {
+  color: #61dafb;
+  border-bottom: 2px solid #61dafb;
+}
+
+.App-main {
+  color: black;
+  margin-top: 100px;
+}
+
+.App-content>div {
+  display: none;
+}
+
+.App-content>div:target {
+  display: block;
+}
+
+
+.App-main h1,
+.App-main ul {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.App-main ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.App-main li {
+  text-align: left;
+}
+
+.App-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.App-nav a.active {
+  color: #61dafb;
+  border-bottom: 2px solid #61dafb;
+}
+
+.App-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.App-content>div {
+  width: 100%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 70px;
+}
+
+.image-container img {
+  flex: 0 0 20%;
+  max-width: 20%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container .text-content {
+  flex: 0 0 46%;
+  max-width: 46%;
+  padding: 20px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+
+  .App-header,
+  .App-nav ul,
+  .App-main,
+  .image-container img {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .App-logo {
+    height: 40px;
+  }
+
+  .App-nav li {
+    margin-bottom: 10px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .App-header {
+    flex-direction: column;
+  }
+
+  .App-nav li {
+    font-size: 0.8rem;
+  }
+
+  .image-container,
+  .image-container img,
+  .image-container .text-content {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .image-container img {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .image-container .text-content {
+    padding: 10px;
+  }
+}
